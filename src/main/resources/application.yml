@@ -3,8 +3,8 @@ spring:
     name: ods-eureka-service
   security:
     user:
-      name: ${EUREKA_USER:eureka}
-      password: ${EUREKA_PASS:eureka}
+      name: ${EUREKA_USER:admin}
+      password: ${EUREKA_PASS:admin}
   cloud:
     loadbalancer:
       ribbon:
