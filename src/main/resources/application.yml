@@ -35,3 +35,4 @@ eureka:
   server:
     a-w-s-access-id: ${AWS_ACCESS_KEY}
     a-w-s-secret-key: ${AWS_SECRET_KEY}
+    eviction-interval-timer-in-ms: 1000
