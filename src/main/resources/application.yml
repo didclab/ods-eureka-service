@@ -32,7 +32,10 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     hostname: localhost
     prefer-ip-address: true
+    metadata-map:
+      user.name: ${BOOT_ADMIN_USER:default}
+      user.password: ${BOOT_ADMIN_PASS:default}
   server:
     a-w-s-access-id: ${AWS_ACCESS_KEY}
     a-w-s-secret-key: ${AWS_SECRET_KEY}
-    eviction-interval-timer-in-ms: 1000
+    eviction-interval-timer-in-ms: 10000
