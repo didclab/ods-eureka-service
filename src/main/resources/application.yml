@@ -5,10 +5,6 @@ spring:
     user:
       name: ${EUREKA_USER:admin}
       password: ${EUREKA_PASS:admin}
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
 server:
   port: 8090
 management:
@@ -28,8 +24,6 @@ eureka:
     service-url:
       defaultZone: http://${EUREKA_BACKUP_URI:localhost}:${EUREKA_BACKUP_PORT:8090}/eureka
   instance:
-    lease-expiration-duration-in-seconds: 20
-    lease-renewal-interval-in-seconds: 5
     hostname: localhost
     prefer-ip-address: true
     metadata-map:
