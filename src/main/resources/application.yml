@@ -18,11 +18,6 @@ management:
       exposure:
         include: "*"
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://${EUREKA_BACKUP_URI:localhost}:${EUREKA_BACKUP_PORT:8090}/eureka
   instance:
     hostname: localhost
     prefer-ip-address: true
@@ -33,3 +28,8 @@ eureka:
     a-w-s-access-id: ${AWS_ACCESS_KEY}
     a-w-s-secret-key: ${AWS_SECRET_KEY}
     eviction-interval-timer-in-ms: 10000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
